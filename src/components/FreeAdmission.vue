@@ -236,7 +236,8 @@ export default {
   font-size: 15px;
   color: #fff;
   border: none;
-  padding: 8px 40px;
+  width: 150px;
+  height: 40px;
   background: rgb(0, 247, 255);
 }
 .title img {
