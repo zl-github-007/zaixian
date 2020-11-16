@@ -20,7 +20,7 @@
           <el-table :data="tableData" border style="width: 100%">
             <el-table-column type="selection" width="50" align="center" :selectable="selectable"></el-table-column>
             <el-table-column prop="id" label="模拟试卷ID" width="200" align="center"></el-table-column>
-            <el-table-column prop="year" label="模拟试卷名称" width="400" align="center"></el-table-column>
+            <el-table-column prop="name" label="模拟试卷名称" width="400" align="center"></el-table-column>
             <el-table-column prop="addtime" label="添加时间" width="450" align="center"></el-table-column>
             <el-table-column prop="operation" label="操作" width="150" align="center">
               <template>
@@ -55,47 +55,47 @@ export default {
       tableData: [
         {
           id: "2019999",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019998",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019997",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019996",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019995",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019994",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019993",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019992",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019991",
-          year: "试卷（一）",
+          name: "试卷（一）",
           addtime: "2017-07-19 14:48:38"
         }
       ]
