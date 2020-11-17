@@ -75,7 +75,6 @@ export default {
         {
           id: "2019999",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -86,7 +85,6 @@ export default {
         {
           id: "2019998",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -97,7 +95,6 @@ export default {
         {
           id: "2019997",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -108,7 +105,6 @@ export default {
         {
           id: "2019996",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -119,7 +115,6 @@ export default {
         {
           id: "2019995",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -130,7 +125,6 @@ export default {
         {
           id: "2019994",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -141,7 +135,6 @@ export default {
         {
           id: "2019993",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -152,7 +145,6 @@ export default {
         {
           id: "2019992",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
@@ -163,7 +155,6 @@ export default {
         {
           id: "2019991",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",

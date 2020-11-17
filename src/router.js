@@ -144,6 +144,16 @@ export default new Router({
                     path: '/index/editfreeadmission',
                     component: () =>
                         import ('../src/components/EditFreeAdmission.vue')
+                },
+                {
+                    path: '/index/addexcellentcourse',
+                    component: () =>
+                        import ('../src/components/AddExcellentCourse.vue')
+                },
+                {
+                    path: '/index/editexcellentcourse',
+                    component: () =>
+                        import ('../src/components/EditExcellentCourse.vue')
                 }
             ]
         }

@@ -29,7 +29,7 @@
             <el-table-column prop="name" label="课程名称" width="150" align="center"></el-table-column>
             <el-table-column prop="image" label="课程图片" width="100" align="center">
               <template slot-scope>
-                <img src="../../img/2.jpg" />
+                <img src="../../img/5.jpg" />
               </template>
             </el-table-column>
             <el-table-column prop="time" label="课程时长" width="100" align="center"></el-table-column>
@@ -39,7 +39,15 @@
             <el-table-column prop="number" label="在学人数" width="150" align="center"></el-table-column>
             <el-table-column prop="Price" label="活动价" width="100" align="center"></el-table-column>
             <el-table-column prop="addtime" label="添加时间" width="180" align="center"></el-table-column>
-            <el-table-column prop="operation" label="操作" width="180" align="center"></el-table-column>
+             <el-table-column prop="operation" label="操作" width="180" align="center">
+              <template>
+                <div class="operation">
+                  <a @click="see()">查看</a>
+                  <a @click="edit()">编辑</a>
+                   <a @click="dle()">删除</a>
+                </div>
+              </template>
+            </el-table-column>
           </el-table>
         </template>
       </div>
@@ -64,119 +72,101 @@ export default {
         {
           id: "2019999",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019998",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019997",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019996",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019995",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019994",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019993",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019992",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         },
         {
           id: "2019991",
           name: "教学观",
-          image: "../../img/2.jpg",
           time: "20小时",
           chapter: "98小节",
           lecturer: "王昭君",
           type: "综合素质",
           number: "123",
           Price: "￥99",
-          addtime: "2017-07-19 14:48:38",
-          operation: "查看 编辑 删除"
+          addtime: "2017-07-19 14:48:38"
         }
       ]
     };
@@ -184,8 +174,21 @@ export default {
   methods: {
     to() {
       this.$router.push({
-        path: "addfreeadmission"
+        path: "addexcellentcourse"
       });
+    },
+     see() {
+      this.$router.push({
+        path: "seeexcellentcourse"
+      });
+    },
+    edit() {
+      this.$router.push({
+        path: "editexcellentcourse"
+      });
+    },
+    dle(){
+      confirm("确定删除吗？");
     }
   }
 }
