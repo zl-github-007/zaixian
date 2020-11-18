@@ -15,7 +15,7 @@
     </div>
     <div class="title">
       <div class="title-1">
-        <button class="AddCommentsFromStudents" @click="to">+添加同学感应</button>
+        <button class="AddCommentsFromStudents" @click="to">+添加同学感言</button>
         <template>
           <el-table :data="tableData" border style="width: 100%">
             <el-table-column type="selection" width="50" align="center" :selectable="selectable"></el-table-column>
@@ -185,7 +185,7 @@ export default {
 }
 .header-1 {
   padding-top: 20px;
-  width: 60%;
+  width: 40%;
 }
 .title {
   padding-bottom: 20px;

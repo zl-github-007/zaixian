@@ -10,6 +10,9 @@
             <el-input v-model="formInline.user" placeholder="手机号"></el-input>
           </el-form-item>
           <el-form-item>
+            <el-date-picker v-model="value1" type="date" placeholder="选择日期"></el-date-picker>
+          </el-form-item>
+          <el-form-item>
             <el-button type="primary" @click="onSubmit">查询</el-button>
             <el-button @click="resetForm('numberValidateForm')">重置</el-button>
           </el-form-item>
@@ -23,12 +26,15 @@
             <el-table-column type="selection" width="50" align="center" :selectable="selectable"></el-table-column>
             <el-table-column prop="id" label="订单编号" width="150" align="center"></el-table-column>
             <el-table-column prop="time" label="购买时间" width="200" align="center"></el-table-column>
+            <el-table-column prop="phone" label="手机号" width="100" align="center"></el-table-column>
+            <el-table-column prop="purchase" label="购买课程" width="150" align="center"></el-table-column>
+            <el-table-column prop="amount" label="订单金额" width="100" align="center"></el-table-column>
+            <el-table-column prop="payment" label="实付金额" width="100" align="center"></el-table-column>
+            <el-table-column prop="state" label="订单状态" width="150" align="center"></el-table-column>
             <el-table-column prop="operation" label="操作" width="150" align="center">
               <template>
                 <div class="operation">
-                  <a @click="see()">查看</a>
-                  <a @click="edit()">编辑</a>
-                  <a @click="dle()">删除</a>
+                  <a @click="see()">查看订单</a>
                 </div>
               </template>
             </el-table-column>
@@ -48,6 +54,7 @@ export default {
   name: "OrderManagement",
   data() {
     return {
+      value1:"",
       value: true,
       formInline: {
         user: "",
@@ -56,71 +63,84 @@ export default {
       tableData: [
         {
           id: "20190909120909",
-          time: "2019-09-09 12:09:09"
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "待支付"
         },
         {
-          id: "2019998",
-          name: "钱乙",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         },
         {
-          id: "2019997",
-          name: "孙丙",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         },
         {
-          id: "2019996",
-          name: "李丁",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         },
         {
-          id: "2019995",
-          name: "周戊",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         },
         {
-          id: "2019994",
-          name: "吴己",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         },
         {
-          id: "2019993",
-          name: "郑庚",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         },
         {
-          id: "2019992",
-          name: "王辛",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         },
         {
-          id: "2019991",
-          name: "冯壬",
-          occupation: "学生",
-          school: "河南大学",
-          expect: "感言。。。",
-          addtime: "2017-07-19 14:48:38"
+          id: "20190909120909",
+          time: "2019-09-09 12:09:09",
+          phone: "手机号",
+          purchase: "综合素质",
+          amount: "10.00",
+          payment: "10.00",
+          state: "已支付"
         }
       ]
     };
@@ -135,14 +155,6 @@ export default {
       this.$router.push({
         path: "seeexaminationsyllabus"
       });
-    },
-    edit() {
-      this.$router.push({
-        path: "editexaminationsyllabus"
-      });
-    },
-    dle() {
-      confirm("确定删除吗？");
     }
   }
 };
@@ -167,7 +179,7 @@ export default {
 }
 .header-1 {
   padding-top: 20px;
-  width: 60%;
+  width: 80%;
 }
 .title {
   padding-bottom: 20px;

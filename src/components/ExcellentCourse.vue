@@ -241,4 +241,9 @@ export default {
   width: 50px;
   height: 30px;
 }
+.operation > a {
+  cursor: pointer;
+  margin: 0 5px;
+  color: rgb(0, 60, 255);
+}
 </style>

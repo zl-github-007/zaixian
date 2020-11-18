@@ -175,7 +175,7 @@
 <script>
 export default {
   name: "AddExcellentCourse",
-   data() {
+  data() {
     return {
       value: true,
       formInline: {
@@ -216,13 +216,13 @@ export default {
           { required: true, message: "请输入章节内容", trigger: "blur" }
         ],
         time: [{ required: true, message: "请输入章节时长", trigger: "blur" }],
-         activityprice: [
+        activityprice: [
           { required: true, message: "请输入活动价", trigger: "blur" }
         ],
-        price: [
-          { required: true, message: "请输入原价", trigger: "blur" }
-        ],
-        discount: [{ required: true, message: "请输入限时折扣", trigger: "blur" }]
+        price: [{ required: true, message: "请输入原价", trigger: "blur" }],
+        discount: [
+          { required: true, message: "请输入限时折扣", trigger: "blur" }
+        ]
       }
     };
   },

@@ -104,17 +104,17 @@ export default {
   methods: {
     to() {
       this.$router.push({
-        path: "addexaminationsyllabus"
+        path: "addsimulationtestpaper"
       });
     },
     see() {
       this.$router.push({
-        path: "seeexaminationsyllabus"
+        path: "seesimulationtestpaper"
       });
     },
     edit() {
       this.$router.push({
-        path: "editexaminationsyllabus"
+        path: "editsimulationtestpaper"
       });
     },
     dle() {
@@ -143,7 +143,7 @@ export default {
 }
 .header-1 {
   padding-top: 20px;
-  width: 60%;
+  width: 40%;
 }
 .title {
   padding-bottom: 20px;

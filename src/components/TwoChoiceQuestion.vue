@@ -193,7 +193,7 @@ export default {
 }
 .header-1 {
   padding-top: 20px;
-  width: 60%;
+  width: 40%;
 }
 .title {
   padding-bottom: 20px;

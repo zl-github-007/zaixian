@@ -154,6 +154,41 @@ export default new Router({
                     path: '/index/editexcellentcourse',
                     component: () =>
                         import ('../src/components/EditExcellentCourse.vue')
+                },
+                {
+                    path: '/index/seeexcellentcourse',
+                    component: () =>
+                        import ('../src/components/SeeExcellentCourse.vue')
+                },
+                {
+                    path: '/index/addexaminationsyllabus',
+                    component: () =>
+                        import ('../src/components/AddExaminationSyllabus.vue')
+                },
+                {
+                    path: '/index/editexaminationsyllabus',
+                    component: () =>
+                        import ('../src/components/EditExaminationSyllabus.vue')
+                },
+                {
+                    path: '/index/seeexaminationsyllabus',
+                    component: () =>
+                        import ('../src/components/SeeExaminationSyllabus.vue')
+                },
+                {
+                    path: '/index/seerealtopicovertheyears',
+                    component: () =>
+                        import ('../src/components/SeeRealTopicOverTheYears.vue')
+                },
+                {
+                    path: '/index/editrealtopicovertheyears',
+                    component: () =>
+                        import ('../src/components/EditRealTopicOverTheYears.vue')
+                },
+                {
+                    path: '/index/addrealtopicovertheyears',
+                    component: () =>
+                        import ('../src/components/AddRealTopicOverTheYears.vue')
                 }
             ]
         }
