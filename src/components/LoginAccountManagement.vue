@@ -15,7 +15,7 @@
     </div>
     <div class="title">
       <div class="title-1">
-        <button class="AddLoginAccountManagement" @click="to">+添加课程</button>
+        <button class="AddLoginAccountManagement" @click="to">+添加账号</button>
         <template>
           <el-table :data="tableData" border style="width: 100%">
             <el-table-column type="selection" width="50" align="center" :selectable="selectable"></el-table-column>
@@ -138,12 +138,12 @@ export default {
   methods: {
     to() {
       this.$router.push({
-        path: "addfreeadmission"
+        path: "addloginaccountmanagement"
       });
     },
     see() {
       this.$router.push({
-        path: "seeexaminationsyllabus"
+        path: "seeloginaccountmanagement"
       });
     },
     del() {

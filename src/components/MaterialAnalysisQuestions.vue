@@ -133,17 +133,17 @@ export default {
   methods: {
     to() {
       this.$router.push({
-        path: "addshortanswerquestions"
+        path: "addmaterialanalysisquestions"
       });
     },
     see() {
       this.$router.push({
-        path: "seeshortanswerquestions"
+        path: "seematerialanalysisquestions"
       });
     },
     edit() {
       this.$router.push({
-        path: "editshortanswerquestions"
+        path: "editmaterialanalysisquestions"
       });
     },
     dle() {

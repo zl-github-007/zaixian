@@ -104,17 +104,17 @@ export default {
   methods: {
     to() {
       this.$router.push({
-        path: "addexaminationsyllabus"
+        path: "addsimulationtestpaper"
       });
     },
     see() {
       this.$router.push({
-        path: "seeexaminationsyllabus"
+        path: "seesimulationtestpaper"
       });
     },
     edit() {
       this.$router.push({
-        path: "editexaminationsyllabus"
+        path: "editsimulationtestpaper"
       });
     },
     dle() {

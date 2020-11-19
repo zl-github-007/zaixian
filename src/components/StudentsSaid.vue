@@ -166,17 +166,17 @@ export default {
   methods: {
     to() {
       this.$router.push({
-        path: "addexaminationsyllabus"
+        path: "addstudentssaid"
       });
     },
     see() {
       this.$router.push({
-        path: "seeexaminationsyllabus"
+        path: "seestudentssaid"
       });
     },
     edit() {
       this.$router.push({
-        path: "editexaminationsyllabus"
+        path: "editstudentssaid"
       });
     },
     dle() {

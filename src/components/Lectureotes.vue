@@ -109,17 +109,17 @@ export default {
     },
     to() {
       this.$router.push({
-        path: "addexaminationsyllabus"
+        path: "addlectureotes"
       });
     },
     see() {
       this.$router.push({
-        path: "seeexaminationsyllabus"
+        path: "seelectureotes"
       });
     },
     edit() {
       this.$router.push({
-        path: "editexaminationsyllabus"
+        path: "editlectureotes"
       });
     },
     dle() {

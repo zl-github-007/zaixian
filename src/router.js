@@ -133,62 +133,187 @@ export default new Router({
                 {
                     path: '/index/addfreeadmission',
                     component: () =>
-                        import ('../src/components/AddFreeAdmission.vue')
+                        import ('../src/add/AddFreeAdmission.vue')
                 },
                 {
                     path: '/index/seefreeadmission',
                     component: () =>
-                        import ('../src/components/SeeFreeAdmission.vue')
+                        import ('../src/see/SeeFreeAdmission.vue')
                 },
                 {
                     path: '/index/editfreeadmission',
                     component: () =>
-                        import ('../src/components/EditFreeAdmission.vue')
+                        import ('../src/edit/EditFreeAdmission.vue')
                 },
                 {
                     path: '/index/addexcellentcourse',
                     component: () =>
-                        import ('../src/components/AddExcellentCourse.vue')
+                        import ('../src/add/AddExcellentCourse.vue')
                 },
                 {
                     path: '/index/editexcellentcourse',
                     component: () =>
-                        import ('../src/components/EditExcellentCourse.vue')
+                        import ('../src/edit/EditExcellentCourse.vue')
                 },
                 {
                     path: '/index/seeexcellentcourse',
                     component: () =>
-                        import ('../src/components/SeeExcellentCourse.vue')
+                        import ('../src/see/SeeExcellentCourse.vue')
                 },
                 {
                     path: '/index/addexaminationsyllabus',
                     component: () =>
-                        import ('../src/components/AddExaminationSyllabus.vue')
+                        import ('../src/add/AddExaminationSyllabus.vue')
                 },
                 {
                     path: '/index/editexaminationsyllabus',
                     component: () =>
-                        import ('../src/components/EditExaminationSyllabus.vue')
+                        import ('../src/edit/EditExaminationSyllabus.vue')
                 },
                 {
                     path: '/index/seeexaminationsyllabus',
                     component: () =>
-                        import ('../src/components/SeeExaminationSyllabus.vue')
-                },
-                {
-                    path: '/index/seerealtopicovertheyears',
-                    component: () =>
-                        import ('../src/components/SeeRealTopicOverTheYears.vue')
-                },
-                {
-                    path: '/index/editrealtopicovertheyears',
-                    component: () =>
-                        import ('../src/components/EditRealTopicOverTheYears.vue')
+                        import ('../src/see/SeeExaminationSyllabus.vue')
                 },
                 {
                     path: '/index/addrealtopicovertheyears',
                     component: () =>
-                        import ('../src/components/AddRealTopicOverTheYears.vue')
+                        import ('../src/add/AddRealTopicOverTheYears.vue')
+                },
+                {
+                    path: '/index/editrealtopicovertheyears',
+                    component: () =>
+                        import ('../src/edit/EditRealTopicOverTheYears.vue')
+                },
+                {
+                    path: '/index/seerealtopicovertheyears',
+                    component: () =>
+                        import ('../src/see/SeeRealTopicOverTheYears.vue')
+                },
+                {
+                    path: '/index/addsimulationtestpaper',
+                    component: () =>
+                        import ('../src/add/AddSimulationTestPaper.vue')
+                },
+                {
+                    path: '/index/editsimulationtestpaper',
+                    component: () =>
+                        import ('../src/edit/EditSimulationTestPaper.vue')
+                },
+                {
+                    path: '/index/seesimulationtestpaper',
+                    component: () =>
+                        import ('../src/see/SeeSimulationTestPaper.vue')
+                },
+                {
+                    path: '/index/addchoicequestion',
+                    component: () =>
+                        import ('../src/add/AddChoiceQuestion.vue')
+                },
+                {
+                    path: '/index/editchoicequestion',
+                    component: () =>
+                        import ('../src/edit/EditChoiceQuestion.vue')
+                },
+                {
+                    path: '/index/seechoicequestion',
+                    component: () =>
+                        import ('../src/see/SeeChoiceQuestion.vue')
+                },
+                {
+                    path: '/index/addshortanswerquestions',
+                    component: () =>
+                        import ('../src/add/AddShortAnswerQuestions.vue')
+                },
+                {
+                    path: '/index/editshortanswerquestions',
+                    component: () =>
+                        import ('../src/edit/EditShortAnswerQuestions.vue')
+                },
+                {
+                    path: '/index/seeshortanswerquestions',
+                    component: () =>
+                        import ('../src/see/SeeShortAnswerQuestions.vue')
+                },
+                {
+                    path: '/index/addmaterialanalysisquestions',
+                    component: () =>
+                        import ('../src/add/AddMaterialAnalysisQuestions.vue')
+                },
+                {
+                    path: '/index/editmaterialanalysisquestions',
+                    component: () =>
+                        import ('../src/edit/EditMaterialAnalysisQuestions.vue')
+                },
+                {
+                    path: '/index/seematerialanalysisquestions',
+                    component: () =>
+                        import ('../src/see/SeeMaterialAnalysisQuestions.vue')
+                },
+                {
+                    path: '/index/addstudentssaid',
+                    component: () =>
+                        import ('../src/add/AddStudentsSaid.vue')
+                },
+                {
+                    path: '/index/editstudentssaid',
+                    component: () =>
+                        import ('../src/edit/EditStudentsSaid.vue')
+                },
+                {
+                    path: '/index/seestudentssaid',
+                    component: () =>
+                        import ('../src/see/SeeStudentsSaid.vue')
+                },
+                {
+                    path: '/index/addcommentsfromstudents',
+                    component: () =>
+                        import ('../src/add/AddCommentsFromStudents.vue')
+                },
+                {
+                    path: '/index/editcommentsfromstudents',
+                    component: () =>
+                        import ('../src/edit/EditCommentsFromStudents.vue')
+                },
+                {
+                    path: '/index/seecommentsfromstudents',
+                    component: () =>
+                        import ('../src/see/SeeCommentsFromStudents.vue')
+                },
+                {
+                    path: '/index/addlectureotes',
+                    component: () =>
+                        import ('../src/add/AddLectureotes.vue')
+                },
+                {
+                    path: '/index/editlectureotes',
+                    component: () =>
+                        import ('../src/edit/EditLectureotes.vue')
+                },
+                {
+                    path: '/index/seelectureotes',
+                    component: () =>
+                        import ('../src/see/SeeLectureotes.vue')
+                },
+                {
+                    path: '/index/addloginaccountmanagement',
+                    component: () =>
+                        import ('../src/add/AddLoginAccountManagement.vue')
+                },
+                {
+                    path: '/index/seeloginaccountmanagement',
+                    component: () =>
+                        import ('../src/see/SeeLoginAccountManagement.vue')
+                },
+                {
+                    path: '/index/addagroupofpeople',
+                    component: () =>
+                        import ('../src/add/AddAGroupOfPeople.vue')
+                },
+                {
+                    path: '/index/editagroupofpeople',
+                    component: () =>
+                        import ('../src/edit/EditAGroupOfPeople.vue')
                 }
             ]
         }

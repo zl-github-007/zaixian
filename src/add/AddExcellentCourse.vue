@@ -1,5 +1,5 @@
 <template>
-  <div id="AddFreeAdmission">
+  <div id="AddExcellentCourse">
     <div class="header">
       <div class="header-1">
         <span>添加课程</span>
@@ -49,8 +49,14 @@
             <el-form-item label="课程类型" prop="type">
               <el-input v-model="ruleForm.type"></el-input>
             </el-form-item>
-            <el-form-item label="是否免费" prop="freeadmission">
-              <el-switch v-model="ruleForm.delivery"></el-switch>
+            <el-form-item label="活动价" prop="activityprice">
+              <el-input v-model="ruleForm.activityprice"></el-input>
+            </el-form-item>
+            <el-form-item label="原价" prop="price">
+              <el-input v-model="ruleForm.price"></el-input>
+            </el-form-item>
+            <el-form-item label="限时折扣" prop="discount">
+              <el-input v-model="ruleForm.discount"></el-input>
             </el-form-item>
           </el-form>
         </div>
@@ -105,7 +111,7 @@
       </div>
       <div class="title-1">
         <div class="title-a title-img">
-          <span>课程介绍</span>
+          <span>课程视频</span>
         </div>
         <div class="title-b">
           <el-upload
@@ -155,20 +161,18 @@
                 <el-button type="primary" class="upload">选择文件</el-button>
               </el-upload>
             </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="to">提交</el-button>
+            </el-form-item>
           </el-form>
         </div>
       </div>
     </div>
-    <el-form>
-      <el-form-item>
-        <el-button type="primary" @click="to">提交</el-button>
-      </el-form-item>
-    </el-form>
   </div>
 </template>
 <script>
 export default {
-  name: "AddFreeAdmission",
+  name: "AddExcellentCourse",
   data() {
     return {
       value: true,
@@ -209,14 +213,21 @@ export default {
         content: [
           { required: true, message: "请输入章节内容", trigger: "blur" }
         ],
-        time: [{ required: true, message: "请输入章节时长", trigger: "blur" }]
+        time: [{ required: true, message: "请输入章节时长", trigger: "blur" }],
+        activityprice: [
+          { required: true, message: "请输入活动价", trigger: "blur" }
+        ],
+        price: [{ required: true, message: "请输入原价", trigger: "blur" }],
+        discount: [
+          { required: true, message: "请输入限时折扣", trigger: "blur" }
+        ]
       }
     };
   },
   methods: {
     to() {
       this.$router.push({
-        path: "freeadmission"
+        path: "excellentcourse"
       });
     },
     submitForm(formName) {
@@ -236,7 +247,7 @@ export default {
 };
 </script>
 <style scoped>
-#AddFreeAdmission {
+#AddExcellentCourse {
   margin-top: 20px;
   background: #f2f2f2;
 }

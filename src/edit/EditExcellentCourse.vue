@@ -111,7 +111,7 @@
       </div>
       <div class="title-1">
         <div class="title-a title-img">
-          <span>课程介绍</span>
+          <span>课程视频</span>
         </div>
         <div class="title-b">
           <el-upload
@@ -161,21 +161,19 @@
                 <el-button type="primary" class="upload">选择文件</el-button>
               </el-upload>
             </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="to">提交</el-button>
+            </el-form-item>
           </el-form>
         </div>
       </div>
     </div>
-    <el-form>
-      <el-form-item>
-        <el-button type="primary" @click="to">提交</el-button>
-      </el-form-item>
-    </el-form>
   </div>
 </template>
 <script>
 export default {
   name: "EditExcellentCourse",
-   data() {
+  data() {
     return {
       value: true,
       formInline: {
@@ -216,13 +214,13 @@ export default {
           { required: true, message: "请输入章节内容", trigger: "blur" }
         ],
         time: [{ required: true, message: "请输入章节时长", trigger: "blur" }],
-         activityprice: [
+        activityprice: [
           { required: true, message: "请输入活动价", trigger: "blur" }
         ],
-        price: [
-          { required: true, message: "请输入原价", trigger: "blur" }
-        ],
-        discount: [{ required: true, message: "请输入限时折扣", trigger: "blur" }]
+        price: [{ required: true, message: "请输入原价", trigger: "blur" }],
+        discount: [
+          { required: true, message: "请输入限时折扣", trigger: "blur" }
+        ]
       }
     };
   },

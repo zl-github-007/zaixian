@@ -1,8 +1,8 @@
 <template>
-    <div id="EditFreeAdmission">
-         <div class="header">
+  <div id="AddAGroupOfPeople">
+    <div class="header">
       <div class="header-1">
-        <span>编辑课程</span>
+        <span>创建活动</span>
       </div>
     </div>
     <div class="title">
@@ -18,39 +18,56 @@
             label-width="100px"
             class="demo-ruleForm"
           >
-            <el-form-item label="课程名称" prop="name">
+            <el-form-item label="活动名称" prop="name">
               <el-input v-model="ruleForm.name"></el-input>
             </el-form-item>
-            <el-form-item label="课程图片">
-              <el-upload
-                class="upload-demo"
-                action="https://jsonplaceholder.typicode.com/posts/"
-                :on-preview="handlePreview"
-                :on-remove="handleRemove"
-                :before-remove="beforeRemove"
-                multiple
-                :limit="3"
-                :on-exceed="handleExceed"
-                :file-list="fileList"
-              >
-                <el-button type="primary" class="upload">上传图片</el-button>
-                <div slot="tip" class="el-upload__tip">建议尺寸800*800px</div>
-              </el-upload>
+            <el-form-item label="活动区域" prop="region">
+              <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+                <el-option label="区域一" value="shanghai"></el-option>
+                <el-option label="区域二" value="beijing"></el-option>
+              </el-select>
             </el-form-item>
-            <el-form-item label="课程时长" prop="duration">
-              <el-input v-model="ruleForm.duration"></el-input>
+            <el-form-item label="活动时间" required>
+              <el-col :span="11">
+                <el-form-item prop="date1">
+                  <el-date-picker
+                    type="date"
+                    placeholder="选择日期"
+                    v-model="ruleForm.date1"
+                    style="width: 100%;"
+                  ></el-date-picker>
+                </el-form-item>
+              </el-col>
+              <el-col class="line" :span="2">-</el-col>
+              <el-col :span="11">
+                <el-form-item prop="date2">
+                  <el-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
+                </el-form-item>
+              </el-col>
             </el-form-item>
-            <el-form-item label="课程小节" prop="section">
-              <el-input v-model="ruleForm.section"></el-input>
-            </el-form-item>
-            <el-form-item label="讲师" prop="lecturer">
-              <el-input v-model="ruleForm.lecturer"></el-input>
-            </el-form-item>
-            <el-form-item label="课程类型" prop="type">
-              <el-input v-model="ruleForm.type"></el-input>
-            </el-form-item>
-            <el-form-item label="是否免费" prop="freeadmission">
+            <el-form-item label="即时配送" prop="delivery">
               <el-switch v-model="ruleForm.delivery"></el-switch>
+            </el-form-item>
+            <el-checkbox-group label="活动性质" prop="type">
+              <el-checkbox-group v-model="ruleForm.type">
+                <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+                <el-checkbox label="地推活动" name="type"></el-checkbox>
+                <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+                <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+              </el-checkbox-group>
+            </el-checkbox-group>
+            <el-form-item label="特殊资源" prop="resource">
+              <el-radio-group v-model="ruleForm.resource">
+                <el-radio label="线上品牌商赞助"></el-radio>
+                <el-radio label="线下场地免费"></el-radio>
+              </el-radio-group>
+            </el-form-item>
+            <el-form-item label="活动形式" prop="desc">
+              <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
+              <el-button @click="resetForm('ruleForm')">重置</el-button>
             </el-form-item>
           </el-form>
         </div>
@@ -105,7 +122,7 @@
       </div>
       <div class="title-1">
         <div class="title-a title-img">
-          <span>课程介绍</span>
+          <span>课程视频</span>
         </div>
         <div class="title-b">
           <el-upload
@@ -155,21 +172,19 @@
                 <el-button type="primary" class="upload">选择文件</el-button>
               </el-upload>
             </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="to">提交</el-button>
+            </el-form-item>
           </el-form>
         </div>
       </div>
     </div>
-    <el-form>
-      <el-form-item>
-        <el-button type="primary" @click="to">提交</el-button>
-      </el-form-item>
-    </el-form>
-    </div>
+  </div>
 </template>
 <script>
 export default {
-    name:'EditFreeAdmission',
-     data() {
+  name: "AddAGroupOfPeople",
+  data() {
     return {
       value: true,
       formInline: {
@@ -233,10 +248,10 @@ export default {
       this.$refs[formName].resetFields();
     }
   }
-}
+};
 </script>
 <style scoped>
-#EditFreeAdmission {
+#AddAGroupOfPeople {
   margin-top: 20px;
   background: #f2f2f2;
 }

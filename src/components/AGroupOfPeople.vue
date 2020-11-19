@@ -6,7 +6,7 @@
           <el-form-item label>
             <el-input v-model="formInline.user" placeholder="活动名称"></el-input>
           </el-form-item>
-           <el-form-item label>
+          <el-form-item label>
             <el-select v-model="formInline.region" placeholder="活动状态">
               <el-option label="已结束" value="yjs"></el-option>
               <el-option label="进行中" value="jzx"></el-option>
@@ -25,6 +25,7 @@
     </div>
     <div class="title">
       <div class="title-1">
+        <button class="AddAGroupOfPeople" @click="to">+创建活动</button>
         <template>
           <el-table :data="tableData" border style="width: 100%">
             <el-table-column type="selection" width="50" align="center" :selectable="selectable"></el-table-column>
@@ -132,10 +133,14 @@ export default {
     };
   },
   methods: {
-
+    to() {
+      this.$router.push({
+        path: "addagroupofpeople"
+      });
+    },
     deit() {
       this.$router.push({
-        path: "seeexaminationsyllabus"
+        path: "seeagroupofpeople"
       });
     },
     over() {
@@ -171,6 +176,17 @@ export default {
   background: #fff;
   width: 95%;
   margin: 20px 0 20px 50px;
+}
+.AddAGroupOfPeople {
+  border-radius: 5px;
+  margin-left: -840px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  width: 150px;
+  height: 40px;
+  background: rgb(0, 247, 255);
 }
 .title-1 {
   margin: 20px 0 0 50px;
